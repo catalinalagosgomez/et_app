@@ -1,0 +1,73 @@
+<div class="d-flex-center">
+  <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
+    <ion-card class="ion-padding">
+      <div class="ion-text-center ion-padding-vertical">
+        <h1>Registrar Usuario</h1>
+      </div>
+      <div style="text-align: center; margin-bottom: 20px;"></div>
+
+      <app-custom-input
+        type="name"
+        autocomplete="name" 
+        icon="mail-outline"
+        label="Nombre"
+        [control]="form.controls.name"
+        label-placement="floating">
+      </app-custom-input>
+      <div class="validators" *ngIf="form.controls.name.invalid && form.controls.name.touched">
+        <div *ngIf="form.controls.name.errors?.['required']">El nombre es requerido</div>
+        <div *ngIf="form.controls.name.errors?.['minlength']">El nombre debe tener al menos 4 caracteres</div>
+      </div>
+
+      <app-custom-input
+        type="email"
+        autocomplete="email" 
+        icon="mail-outline"
+        label="Correo"
+        [control]="form.controls.email"
+        label-placement="floating">
+      </app-custom-input>
+      <div class="validators" *ngIf="form.controls.email.invalid && form.controls.email.touched">
+        <div *ngIf="form.controls.email.errors?.['required']">El correo es requerido</div>
+        <div *ngIf="form.controls.email.errors?.['email']">El correo no es válido</div>
+      </div>
+
+      <!-- Campo para Contraseña -->
+      <app-custom-input
+        type="password"
+        autocomplete="current-password"
+        icon="lock-closed-outline"
+        label="Contraseña"
+        [control]="form.controls.password"
+        label-placement="floating">
+      </app-custom-input>
+      <div class="validators" *ngIf="form.controls.password.invalid && form.controls.password.touched">
+        <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida</div>
+      </div>
+
+      <ion-item>
+        <ion-label>Rol</ion-label>
+        <ion-select formControlName="role" placeholder="Selecciona un rol">
+          <ion-select-option value="user">Alumno</ion-select-option>
+          <ion-select-option value="profesor">Profesor</ion-select-option>
+        </ion-select>
+      </ion-item> 
+      <div class="validators" *ngIf="form.controls.role.invalid && form.controls.role.touched">
+        <div *ngIf="form.controls.role.errors?.['required']">El rol es requerido</div>
+      </div>
+
+      <div class="ion-padding-vertical">
+        <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+          Registrarse
+          <ion-icon slot="end" name="person-outline"></ion-icon>
+        </ion-button>
+        <ion-button expand="block" mode="ios" class="cancel" routerLink="/main">
+          Volver
+          <ion-icon slot="end" name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card>
+  </form>
+</div>
+
+

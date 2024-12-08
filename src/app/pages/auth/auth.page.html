@@ -1,0 +1,48 @@
+<div class="d-flex-center ion-margin-top">
+  <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()"(keypress.enter)="submit()">
+    <ion-card class="ion-padding custom-margin">
+      <div class="ion-text-center ion-padding-vertical">
+        <h1 class="duoc2">DuocUc</h1>
+        <h3 class="duoc"> Bienvenido</h3>
+          
+      </div>
+      
+      <div style="text-align: center; margin-bottom: 20px;">
+        <app-custom-input
+          type="email"
+          autocomplete="email" 
+          icon="mail-outline"
+          label="Correo"
+          [control]="form.controls.email"
+          label-placement="floating">
+        </app-custom-input>
+        <div class="validators" *ngIf="form.controls.email.invalid && form.controls.email.touched">
+          <div *ngIf="form.controls.email.errors?.['required']">El correo es requerido</div>
+          <div *ngIf="form.controls.email.errors?.['email']">El correo no es válido</div>
+        </div>
+
+        <app-custom-input
+          type="password"
+          autocomplete="current-password"
+          icon="lock-closed-outline"
+          label="Contraseña"
+          [control]="form.controls.password"
+          label-placement="floating">
+        </app-custom-input>
+        <div class="validators" *ngIf="form.controls.password.invalid && form.controls.password.touched">
+          <div *ngIf="form.controls.password.errors?.['required']">La contraseña es requerida</div>
+      </div>
+      
+      <p class="ion-text-end" routerLink="/forgot-password">¿Olvidaste tu contraseña?</p>
+
+        <div class="ion-padding-vertical">
+          <ion-button expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+            Ingresar
+            <ion-icon slot="end" name="log-in-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-card>
+  </form>
+</div>
+

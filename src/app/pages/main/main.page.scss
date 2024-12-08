@@ -1,0 +1,61 @@
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #041d52;
+}
+
+
+  h1 {
+    color: #041d52;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  h3 {
+    color: #ffc400;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.submit2 {
+  --background: #041d52;
+  --color: #ffc400;
+  
+  &:hover {
+    --background: #082b73;
+  }
+
+  ion-icon {
+    color: #ffc400;
+  }
+
+}
+.submit:last-child {
+  --background: #ffc400;
+  --color: #041d52;
+
+  ion-icon {
+    color: #041d52;
+  }
+
+  &:hover {
+    --background: #e6b000;
+  }
+}
+
+
+@media (max-width: 576px) {
+  ion-card {
+    width: 100%;
+    margin: 50px;
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.custom-margin {
+  margin-top: 10vh;
+}

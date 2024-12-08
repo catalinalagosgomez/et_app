@@ -1,0 +1,45 @@
+ion-header {
+    --background: #041d52; 
+  }
+  
+ion-toolbar {
+    --background: #041d52;
+}
+  
+ion-title {
+    --color: #ffc400; 
+}
+  
+.menu-container {
+    padding: 50px;
+}
+  
+h2 {
+    color: #ffc400; 
+    text-align: center;
+    margin-bottom: 2dvh;
+}
+  
+ion-button {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+.btn-scan-qr {
+    --background: #041d52; 
+    --color: #fff; 
+}
+  
+.btn-history {
+    --background: #041d52; 
+    --color: #fff; 
+}
+  
+.btn-logout {
+    
+    --background: #ffc400; 
+    --color: #041d52; 
+}
+ion-card {
+    margin-top: 10vh;
+}

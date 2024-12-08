@@ -1,0 +1,33 @@
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+  }
+.submit {
+  --background: #041d52;
+  --color: #ffc400;
+  margin-top: 20px;
+  height: 45px;
+}
+
+ion-button[routerLink="/sign-up"] {
+  --background: #ffc400;
+  --color: #041d52;
+  margin-top: 10px;
+  height: 45px;
+}
+
+.custom-margin {
+  margin-top: 10vh;  
+}
+.duoc {
+  color: #041d52;
+  font-size: 1.5rem;
+
+}
+.duoc2 {
+  color: #ffc400;
+  font-size: 1.5rem;
+}

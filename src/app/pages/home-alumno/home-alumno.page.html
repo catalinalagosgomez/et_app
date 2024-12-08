@@ -1,0 +1,18 @@
+<ion-content class="ion-padding">
+  <div class="d-flex-center ion-margin-top">
+    <ion-card class="ion-padding custom-margin">
+      <div class="menu-container">
+        <h2>Bienvenido, Alumno <br> {{userName}}</h2>
+        <ion-button expand="block" class="btn-scan-qr" [routerLink]="['/qr-scanner']">
+          Escanear QR
+        </ion-button>
+        <ion-button expand="block" class="btn-history" (click)="navigateTo('/historial-asistencia')">
+          Historial de asistencia
+        </ion-button>
+        <ion-button expand="block" class="btn-logout" (click)="navigateTo('/auth')">
+          Cerrar sesión
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

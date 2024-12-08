@@ -1,0 +1,41 @@
+ion-header {
+  --background: #041d52; 
+}
+
+ion-toolbar {
+  --background:#041d52; 
+}
+
+ion-title {
+  --color: #ffc400;
+}
+
+.menu-container {
+  padding: 20px;
+}
+
+h2 {
+  color:  #ffc400; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ion-button {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btn-generate-qr {
+  --background:#041d52; /* Azul DuocUC */
+  --color: #fff;
+}
+
+.btn-view-attendance {
+  --background:#041d52; /* Azul DuocUC */
+  --color: #fff;
+}
+
+.btn-logout {
+  --background: #ffc400; 
+  --color: #041d52; 
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historial de Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="menu-container">
+
+    <h2>Asistencia </h2>
+  <ion-button class="btn-historial" (click)="fetchAttendance()">Ver asistencia</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let record of attendanceRecords">
+      <ion-label>
+        {{ record.date }} - {{ record.status }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+ <ion-button expand="block" class="btn-volver" (click)="navigateToHomeAlumno()">Volver</ion-button>
+</div>
+</ion-content>

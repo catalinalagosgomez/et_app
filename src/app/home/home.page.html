@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      DuocUc
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="d-flex-center ion-margin-top">
+    <ion-card class="ion-padding custom-margin">
+      <div class="menu-container">
+        <h2>Bienvenido, Docente <br> {{userName}}</h2>
+        
+        <ion-button expand="block" class="btn-generate-qr" [routerLink]="['/docenteqr']">
+          Generar QR
+        </ion-button>
+
+        <ion-button expand="block" class="btn-view-attendance" (click)="navigateTo('/asistencia')">
+          Ver asistencia
+        </ion-button>
+
+        <ion-button expand="block" class="btn-view-subjects" (click)="navigateTo('/asignatura')">
+          Registrar Asignaturas
+        </ion-button>
+        <ion-button expand="block" class="btn-logout" (click)="logout()">
+          Cerrar sesión
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-text">DuocUcApp - v1.0</ion-title>
+  </ion-toolbar>
+</ion-footer>
