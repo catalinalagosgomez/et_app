@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'asignatura',
     loadChildren: () => import('./pages/asignatura/asignatura.module').then( m => m.AsignaturaPageModule)
   },
+  {
+    path: 'qr-scanner',
+    loadChildren: () => import('./pages/qr-scanner/qr-scanner.module').then( m => m.QrScannerPageModule)
+  },
 
 
 ];
